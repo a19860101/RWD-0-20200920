@@ -38,26 +38,94 @@ XHTML 1.1
 - height 
 - title
 ### 連結
+```html
+<a href="https://tw.yahoo.com" target="_blank" title="YAHOOOOOOO">YAHOO</a>
+<a href="002.html">002</a>
+```
 a 連結
 - href
 - title
 - target
 ## 清單
-- ul
-    - li
-- ol
-    - li
-- dl
-    - dt
-    - dd
+```html
+<ul type="disc">
+    <li>項目清單</li>
+    <li>項目清單</li>
+</ul>
+<ul type="circle">
+    <li>項目清單</li>
+    <li>項目清單</li>
+</ul>
+<ul type="square">
+    <li>項目清單</li>
+    <li>項目清單</li>
+</ul>
+<ol type="1">
+    <li>編號清單</li>
+    <li>編號清單</li>
+</ol>
+<ol type="A">
+    <li>編號清單</li>
+    <li>編號清單</li>
+</ol>
+<ol type="a">
+    <li>編號清單</li>
+    <li>編號清單</li>
+</ol>
+<ol type="I">
+    <li>編號清單</li>
+    <li>編號清單</li>
+</ol>
+<ol type="i">
+    <li>編號清單</li>
+    <li>編號清單</li>
+</ol>
+<dl>
+    <dt>清單標題</dt>
+    <dd>清單描述</dd>
+    <dt>清單標題</dt>
+    <dd>清單描述</dd>
+</dl>
+```
 ## 表格
-- table
-    - thead
-    - tbody
-    - tfoot
-    - tr
-        - td
-        - th
+```html
+<table border="1" width="600" height="400">
+    <thead>
+        <tr>
+            <th>標題</th>
+            <th>標題</th>
+            <th>標題</th>
+            <th>標題</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td rowspan="2">F</td>
+            <td>G</td>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>K</td>
+            <td>L</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">備註</td>
+        </tr>
+    </tfoot>  
+</table>                   
+```
+> rowspan 列合併
+> colspan 欄合併
 ## 表單
 ```html
 <form action="" method="">
@@ -117,7 +185,32 @@ a 連結
     <input type="radio" name="gender" value="female" id="female">
 </label>
 ```
+## HTML5 語意標籤
+```html
+<nav></nav>
+<header></header>
+<footer></footer>
 
+<section></section>
+<article></article>
+
+<aside></aside>
+
+<main></main>
+
+<figure>
+    <img src="#" alt="#">
+    <figcaption></figcaption>
+</figure>
+```
+### picture
+```html
+<picture>
+    <source srcset="https://picsum.photos/id/34/800" media="(min-width:800px)"> 
+    <source srcset="https://picsum.photos/id/39/600" media="(min-width:600px)"> 
+    <img src="https://picsum.photos/id/14/300" alt="">
+</picture>
+```
 ## 圖片網站
 ### visual hunt
 - https://visualhunt.com/
