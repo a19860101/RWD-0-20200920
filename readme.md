@@ -54,6 +54,28 @@ a 連結
     - tr
         - td
         - th
+## 表單
+```html
+<form action="" method="">
+    <input type="text" name="user">
+    <input type="password" name="pw">
+    <input type="radio" name="gender" value="male">男
+    <input type="radio" name="gender" value="female">女
+    <input type="radio" name="gender" value="unknown">未知
+    <input type="checkbox" name="hobby">吃
+    <input type="checkbox" name="hobby">喝
+    <input type="checkbox" name="hobby">完
+    <input type="checkbox" name="hobby">樂
+    <select name="edu">
+        <option value="國小">國小</option>
+        <option value="國中">國中</option>
+        <option value="高中職">高中職</option>
+        <option value="大專院校">大專院校</option>
+    </select>
+    <textarea name="content" cols="30" rows="10"></textarea>
+    <input type="submit" value="送出">
+</form>
+```
 ## 圖片網站
 ### visual hunt
 - https://visualhunt.com/
