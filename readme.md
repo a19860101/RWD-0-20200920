@@ -14,14 +14,18 @@ XHTML 1.1
 - meta 網頁資料
 - body 網頁內容
 ### 標題
-- h1 標題一
-- h2 標題二
-- h3 標題三
-- h4 標題四
-- h5 標題五
-- h6 標題六
+```html
+<h1>標題一</h1>
+<h2>標題二</h2>
+<h3>標題三</h3>
+<h4>標題四</h4>
+<h5>標題五</h5>
+<h6>標題六</h6>
+```
 ### 段落
-p 段落
+```html
+<p>
+```
 ### 圖片
 img 圖片 
 - src
@@ -34,8 +38,23 @@ a 連結
 - href
 - title
 - target
-## 圖片網站
 ## 清單
+- ul
+    - li
+- ol
+    - li
+- dl
+    - dt
+    - dd
+## 表格
+- table
+    - thead
+    - tbody
+    - tfoot
+    - tr
+        - td
+        - th
+## 圖片網站
 ### visual hunt
 - https://visualhunt.com/
 
