@@ -241,3 +241,22 @@ div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,header,footer,nav,main,aside,section,a
 ### 行內元素
 span,a,img,b,i,small,em,strong,sup,sub,del,u
 
+# CSS
+## 分類
+- 嵌入式
+- 內部
+- 外部
+
+## 外部樣式表連結方式
+```html
+<link href="style.css" rel="stylesheet">
+```
+```css
+@import url("style.css");
+```
+
+## 選取器
+- tag
+- class
+- id
+- *
