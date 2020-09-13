@@ -259,4 +259,14 @@ span,a,img,b,i,small,em,strong,sup,sub,del,u
 - tag
 - class
 - id
-- *
+- 萬用
+> class可重複使用，id選取器只可使用一次
+
+## 權重
+影響的元素越少，權重越重。
+物以稀為貴 id > class > tag
+
+## 配色網站
+https://colorhunt.co/
+https://coolors.co/
+https://nipponcolors.com/
