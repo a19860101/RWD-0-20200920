@@ -235,5 +235,9 @@ a 連結
 ### placeholder
 - https://placeholder.com/
 
-
+## 區塊與行內
+### 區塊元素
+div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,header,footer,nav,main,aside,section,article,figure
+### 行內元素
+span,a,img,b,i,small,em,strong,sup,sub,del,u
 
