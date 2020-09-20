@@ -10,10 +10,19 @@
             margin: auto;
 
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-flow: row wrap; */
+            justify-content: space-evenly;
+            /* 
+                flex-start,flex-end,center
+                space-around, space-between, *space-evenly
+             */
+            
             background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
         }
         .box {
-            width: 25%;
+            width: 20%;
             /* background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%); */
         }
     </style>
@@ -27,24 +36,25 @@
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 1</h2>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic velit omnis at ullam, suscipit alias facere, aperiam cupiditate eius similique ipsam ipsum ad fugiat ab cumque nam esse accusantium illum quidem impedit eaque ipsa atque ex! Soluta incidunt asperiores quo.
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 2</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto deleniti consequatur enim? Blanditiis quaerat ab vel eveniet possimus deleniti assumenda dolore eligendi provident illum fugit ullam earum molestiae, officiis fuga.
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto deleniti consequatur enim? Blanditiis quaerat ab vel eveniet possimus deleniti assumenda dolore eligendi provident illum fugit ullam earum molestiae, officiis fuga.
             </p>
         </div>
         <div class="box">
-            <h2>title</h2>
+            <h2>title 3</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto deleniti consequatur enim? Blanditiis quaerat ab vel eveniet possimus deleniti assumenda dolore eligendi provident illum fugit ullam earum molestiae, officiis fuga.
             </p>
         </div>
+        
     </div>    
 </body>
 </html>
