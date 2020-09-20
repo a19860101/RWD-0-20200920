@@ -41,3 +41,50 @@
 }
 ```
 > 在運算子的前後要加上空格，否則會造成解析錯誤
+
+## float
+文繞圖。讓區塊靠左或靠右浮動。
+> 在float下方的區塊，文字會繞著float物件，但區塊本身會被壓在float物件下方，可使用clear清除。
+### clear
+清除元素對浮動的影響。
+```css
+.box {
+    clear: left;
+    /* left,right,both */
+}
+```
+### 產生的問題
+1. 當前方元素為浮動時，後方元素會受到影響
+2. 當子元素都是浮動時，父元素高度會歸零（父元素崩蹋）
+    - 解法一： 設定高度
+
+    - 解法二： 設定overflow:auto到父元素
+    ```css
+    .container {
+        overflow: auto;
+    }
+    ```
+    - 解法三： 設定clearfix到父元素
+    ```css 
+    .clearfix::after {
+        content:"";
+        display: block;
+        clear: both;
+    }
+    ```
+    - 解法四： 設定display: flow-root到父元素
+    ```css
+    .container {
+        display: flow-root;
+    }
+    ```
+## 虛擬元素 before , after
+在元素內的前方、後方產生一個虛擬的元素，產生的為行內元素，一定要加上content屬性。
+```css
+h1::before {
+    content:"before";
+}
+h1::after {
+    content:"after";
+}
+```
