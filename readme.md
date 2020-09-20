@@ -623,3 +623,7 @@ margin:10px 30px 0px 20px;  /*上10px,右30px,下0px,左20px*/
 * [文鼎雲字庫](https://www.ifontcloud.com/index/index.jsp)
 * [Just Font](https://justfont.com/)
 * [CanIUse](https://caniuse.com/)
+* [Gradient](https://www.grabient.com/)
+* [WebGradients](https://webgradients.com/)
+* [CoolHue](https://webkul.github.io/coolhue/)
+* [Css Gradients Pattern](http://projects.verou.me/css3patterns/)
