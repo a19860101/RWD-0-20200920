@@ -9,11 +9,11 @@
             width: 800px;
             background-color: #999;
             /* height: 200px; */
-            overflow: auto;
+            /* overflow: auto; */
         }
         .box1 {
             width: 200px;
-            height: 400px;
+            height: 200px;
             background-color: #f00;
             float: left;
         }
@@ -21,12 +21,19 @@
             width: 100px;
             height: 100px;
             background-color: #00f;
-            float: right;
+            float: left;
+        }
+        .clearfix::after {
+            content:"";
+            display: block;
+            clear: both;
+
+            background-color: #fa0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container clearfix">
         <div class="box1"></div>
         <div class="box2"></div>
     </div>
