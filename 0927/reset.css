@@ -1,0 +1,15 @@
+*{
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-family: serif;
+     box-sizing: border-box;
+ }
+img {
+    width: 100%;
+}
+.clearfix::after {
+    content:"";
+    display: block;
+    clear: both;
+}

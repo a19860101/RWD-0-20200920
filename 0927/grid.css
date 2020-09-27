@@ -1,9 +1,7 @@
 * {
     box-sizing: border-box;
 }
-img {
-    width: 100%;
-}
+
 .full-width {
     width: 100%;
 }
@@ -59,3 +57,9 @@ img {
 [class*="col"]{
     padding: 15px;
 }
+/* [class^="col"]{
+    padding: 15px;
+}
+[class$="col"]{
+    padding: 15px;
+} */
