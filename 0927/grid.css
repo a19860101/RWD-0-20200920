@@ -66,3 +66,50 @@
 .no-padding {
     padding: 0;
 }
+
+.p-0 {
+    padding: 0;
+}
+.p-1 {
+    padding: 5px;
+}
+.p-2 {
+    padding: 10px;
+}
+.pt-0{
+    padding-top: 0;
+}
+.pt-1 {
+    padding-top: 5px;
+}
+.pt-2 {
+    padding-top: 10px;
+}
+.pr-0 {
+    padding-right: 0;
+}
+.pr-1 {
+    padding-right: 5px;
+}
+.py-0 {}
+.py-1 {}
+.py-2 {}
+.px-0 {}
+.px-1 {}
+.px-2 {}
+
+.justify-content-center {
+    justify-content: center;
+}
+.t-left {
+    text-align: left;
+}
+.t-right {
+    text-align: right;
+}
+.t-center {
+    text-align: center;
+}
+.t-justify {
+    text-align: justify;
+}
