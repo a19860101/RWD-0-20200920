@@ -131,7 +131,7 @@ h1::after {
     */
 }
 ```
-> space-evenly是後期加入的值，相容性差不建議使用
+> space-evenly是後期加入的值，~~IE相容性差不建議使用~~
 
 ### align-items
 ```css

@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
 .full-width {
     width: 100%;
 }
@@ -48,4 +54,8 @@
 }
 .col-12 {
     flex: 0 0 calc(100% / 12 * 12);
+}
+/* 屬性選取器 */
+[class*="col"]{
+    padding: 15px;
 }
