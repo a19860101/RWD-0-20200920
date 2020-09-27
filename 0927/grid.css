@@ -11,7 +11,7 @@
     flex-direction: row;
 }
 .col {
-    flex:0 0 
+    flex: 1 0 0;
 }
 .col-1 {
     flex: 0 0 calc(100% / 12 * 1);
