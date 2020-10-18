@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            perspective: 800px;
+        }
+        .front {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #2bfff4;
+            transition: 1s;
+        }
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #f85b70;
+            transform:rotateY(180deg);
+            backface-visibility: hidden;
+            transition: 1s;
+        }
+        .card:hover .back {
+            transform:rotateY(360deg);
+        }
+        .card:hover .front {
+            transform:rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="front">asdf</div>
+        <div class="back">asdf</div>
+    </div>
+</body>
+</html>
