@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            position: absolute;
+            display: none;
+        }
+        .b1 {
+            display: block;
+        }
+        .a1:focus ~ .b1 {
+            display: block;
+        }
+        .a2:focus ~ .b2 {
+            display: block;
+        }
+        .a3:focus ~ .b3 {
+            display: block;
+        }
+        .a4:focus ~ .b4 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="a1">001</a>
+    <a href="#" class="a2">002</a>
+    <a href="#" class="a3">003</a>
+    <a href="#" class="a4">004</a>
+    <div class="img b1"><img src="https://picsum.photos/id/50/300" alt=""></div>
+    <div class="img b2"><img src="https://picsum.photos/id/51/300" alt=""></div>
+    <div class="img b3"><img src="https://picsum.photos/id/52/300" alt=""></div>
+    <div class="img b4"><img src="https://picsum.photos/id/53/300" alt=""></div>
+</body>
+</html>
