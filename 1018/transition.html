@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            font-family:"Segoe UI";
+            width: 200px;
+            height: 100px;
+            margin: 10px 50px;
+            background-color: #fc3c3c;
+            line-height: 100px;
+            padding-left: 10px;
+            /* transition: width 1s 0s,height 1s 1s,background-color 1s 2s; */
+            /* transition-duration: 1s; */
+            /* transition-property: width,height,background-color; */
+            /* transition-delay:0s,1s,2s; */
+        }
+        .box:hover {}
+        .container .box1{
+            /* transition: 1s ease; */
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+        .container .box2{
+            /* transition: 1s ease-in; */
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+        }
+        .container .box3{
+            /* transition: 1s ease-out; */
+            transition-duration: 1s;
+            transition-timing-function: ease-out;
+        }
+        .container .box4{
+            /* transition: 1s ease-in-out; */
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+        .container .box5{
+            /* transition: 1s linear; */
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .container .box6{
+            /* transition: 1s linear; */
+            transition-duration: 5s;
+            transition-timing-function: cubic-bezier(.27,-0.41,.78,1.32);
+        }
+        .container:hover .box {
+            width: 600px;            
+            background-color: #fce306;
+        }
+                /* transition: property duration delays timing-function */
+    </style>
+</head>
+<body>
+    <h1>Transition</h1>
+    <div class="container">
+        <div class="box box1">ease</div>
+        <div class="box box2">ease-in</div>
+        <div class="box box3">ease-out</div>
+        <div class="box box4">ease-in-out</div>
+        <div class="box box5">linear</div>
+        <div class="box box6">Cubiic-bezier</div>
+    </div>
+    <div class="container">
+
+        <div class="box1"></div>
+    </div>
+</body>
+</html>
