@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            perspective: 800px;
+        }
+        .front {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #2bfff4;
+            transition: 1s;
+            transform-origin:left;
+        }
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #f85b70;
+            transform:rotateY(320deg);
+            backface-visibility: hidden;
+            transition: 1s;
+            transform-origin: left;
+            opacity: 0;
+        }
+        .card:hover .back {
+            transform:rotateY(360deg);
+            opacity: 1;
+        }
+        .card:hover .front {
+            transform:rotateY(45deg);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="front">
+            <img src="https://picsum.photos/id/43/200/300" alt="">
+        </div>
+        <div class="back">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, hic?</div>
+    </div>
+</body>
+</html>
