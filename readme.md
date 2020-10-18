@@ -634,3 +634,4 @@ margin:10px 30px 0px 20px;  /*上10px,右30px,下0px,左20px*/
 * [WebGradients](https://webgradients.com/)
 * [CoolHue](https://webkul.github.io/coolhue/)
 * [Css Gradients Pattern](http://projects.verou.me/css3patterns/)
+* [Cubic-Bezier](https://cubic-bezier.com/)
