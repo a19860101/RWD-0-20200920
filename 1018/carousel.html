@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .space {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            perspective: 800px;
+
+            margin: 10% auto;
+        }
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+
+            transition: 10s;
+        }
+        .carousel:hover {
+            transform: rotateY(360deg);
+        }
+        .plane {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+        }
+        .plane:nth-of-type(1){
+            transform: translateZ(362.3px);
+        }
+        .plane:nth-of-type(2){
+            transform: rotateY(45deg)translateZ(362.3px);
+        }
+        .plane:nth-of-type(3){
+            transform: rotateY(90deg)translateZ(362.3px);
+        }
+        .plane:nth-of-type(4){
+            transform: rotateY(135deg)translateZ(362.3px);
+        }
+        .plane:nth-of-type(5){
+            transform: rotateY(180deg)translateZ(362.3px);
+        }
+        .plane:nth-of-type(6){
+            transform: rotateY(225deg)translateZ(362.3px);
+        }
+        .plane:nth-of-type(7){
+            transform: rotateY(270deg)translateZ(362.3px);
+        }
+        .plane:nth-of-type(8){
+            transform: rotateY(315deg)translateZ(362.3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="space">
+        <div class="carousel">
+            <div class="plane"></div>
+            <div class="plane"></div>
+            <div class="plane"></div>
+            <div class="plane"></div>
+            <div class="plane"></div>
+            <div class="plane"></div>
+            <div class="plane"></div>
+            <div class="plane"></div>
+        </div>
+    </div>
+</body>
+</html>
