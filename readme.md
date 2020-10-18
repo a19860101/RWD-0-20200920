@@ -620,7 +620,27 @@ margin:10px 30px 0px 20px;  /*上10px,右30px,下0px,左20px*/
 * Absolute 絕對定位
 * Fixed 固定定位
 * Sticky 黏性定位
+### transition --- 轉場
+* transition-property
+* transition-duration
+* transition-delay
+* transition-timing-function
+```css
+/* 縮寫 */
+transition: width 1s 0s,height 1s 1s,background-color 1s 2s;
+/*完整寫法 */
+transition-duration: 1s;
+transition-property: width,height,background-color;
+transition-delay:0s,1s,2s;
+transition-timing-function:ease;
 
+/* timing funtion */
+* ease-in;
+* ease-out;
+* ease-in-out;
+* linear;
+* cubic-bezier(.27,-0.41,.78,1.32);
+```
 ## 補充網站
 * [Color Hunt](https://colorhunt.co/)
 * [Coolors](https://coolors.co/)
