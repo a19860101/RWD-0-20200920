@@ -614,6 +614,13 @@ margin:10px 30px 0px 20px;  /*上10px,右30px,下0px,左20px*/
 * flex
 * inline-flex
 * grid
+### position --- 定位
+* Static 靜態定位
+* Relative 相對定位
+* Absolute 絕對定位
+* Fixed 固定定位
+* Sticky 黏性定位
+
 ## 補充網站
 * [Color Hunt](https://colorhunt.co/)
 * [Coolors](https://coolors.co/)
