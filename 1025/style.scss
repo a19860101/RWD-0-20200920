@@ -1,9 +1,9 @@
-// $columns:12;
-// @for $i from 1 through $columns {
-//     .col-#{$i}{
-//         flex: 0 0 calc(100% / #{$columns} * #{$i})
-//     }
-// }
+$columns:12;
+@for $i from 1 through $columns {
+    .col-#{$i}{
+        flex: 0 0 calc(100% / #{$columns} * #{$i})
+    }
+}
 
 $colors: red blue green yellow;
 @each $color in $colors {
