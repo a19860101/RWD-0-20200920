@@ -1,36 +1,32 @@
-.col-1 {
-  flex: 0 0 calc(100% / 12 * 1); }
+.box-red {
+  background-color: red;
+}
 
-.col-2 {
-  flex: 0 0 calc(100% / 12 * 2); }
+.box-blue {
+  background-color: blue;
+}
 
-.col-3 {
-  flex: 0 0 calc(100% / 12 * 3); }
+.box-green {
+  background-color: green;
+}
 
-.col-4 {
-  flex: 0 0 calc(100% / 12 * 4); }
+.box-yellow {
+  background-color: yellow;
+}
 
-.col-5 {
-  flex: 0 0 calc(100% / 12 * 5); }
+.t-left {
+  text-align: left;
+}
 
-.col-6 {
-  flex: 0 0 calc(100% / 12 * 6); }
+.t-right {
+  text-align: right;
+}
 
-.col-7 {
-  flex: 0 0 calc(100% / 12 * 7); }
+.t-center {
+  text-align: center;
+}
 
-.col-8 {
-  flex: 0 0 calc(100% / 12 * 8); }
-
-.col-9 {
-  flex: 0 0 calc(100% / 12 * 9); }
-
-.col-10 {
-  flex: 0 0 calc(100% / 12 * 10); }
-
-.col-11 {
-  flex: 0 0 calc(100% / 12 * 11); }
-
-.col-12 {
-  flex: 0 0 calc(100% / 12 * 12); }
+.t-justify {
+  text-align: justify;
+}
 /*# sourceMappingURL=style.css.map */
