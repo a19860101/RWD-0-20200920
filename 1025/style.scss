@@ -7,17 +7,39 @@ $breakpoints:(
 );
 $grid:12;
 // .col-{breakpoints}-{number}
+.full-width {
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
 @each $name,$width in $breakpoints {
-    @for $i from 1 through $grid {
+    @media(min-width: $width){
         @if($width == 0){
-            .col-#{$i}{
-                flex: 0 0 calc(100% / #{$grid} * #{$i});
+            .fixed-width {
+                width: 100%;
             }
         }
-        @else {
-            .col-#{$name}-#{$i}{
-                flex: 0 0 calc(100% / #{$grid} * #{$i});
+        @else{
+            .fixed-width {
+                width: $width;
+                margin: auto;
+            }
+        }
+
+        @for $i from 1 through $grid {
+            @if($width == 0){
+                .col-#{$i}{
+                    flex: 0 0 calc(100% / #{$grid} * #{$i});
+                }
+            }
+            @else {
+                .col-#{$name}-#{$i}{
+                    flex: 0 0 calc(100% / #{$grid} * #{$i});
+                }
             }
         }
     }
+    
 }
