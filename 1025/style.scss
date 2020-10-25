@@ -1,0 +1,22 @@
+$blue: #0af;
+$red: #f00;
+
+.box {
+    background-color: $blue;
+    color: $red;
+}
+//nested 巢狀
+nav {
+    a {
+        span {
+            color: $red;
+        }
+    }
+    div {
+        color: $red;
+    }
+}
+
+nav a {
+
+}
