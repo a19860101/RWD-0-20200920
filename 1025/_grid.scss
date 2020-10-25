@@ -1,0 +1,38 @@
+
+// .col-{breakpoints}-{number}
+.full-width {
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+@each $name,$width in $breakpoints {
+    @media(min-width: $width){
+        @if($width == 0){
+            .fixed-width {
+                width: 100%;
+            }
+        }
+        @else{
+            .fixed-width {
+                width: $width;
+                margin: auto;
+            }
+        }
+
+        @for $i from 1 through $grid {
+            @if($width == 0){
+                .col-#{$i}{
+                    flex: 0 0 calc(100% / #{$grid} * #{$i});
+                }
+            }
+            @else {
+                .col-#{$name}-#{$i}{
+                    flex: 0 0 calc(100% / #{$grid} * #{$i});
+                }
+            }
+        }
+    }
+    
+}

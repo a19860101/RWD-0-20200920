@@ -7,7 +7,6 @@
             // "savePath": "~/../css"
             "savePath": "~/css"
         },
-        // You can add more
         {
             "format": "compressed",
             "extensionName": ".min.css",
