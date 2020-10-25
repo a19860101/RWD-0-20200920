@@ -17,3 +17,22 @@ $aligns: left right center justify;
         text-align: $align;
     }
 }
+
+$breakpoints:(
+    sm:480px,
+    md:720px,
+    lg:960px,
+    xl:1200px
+);
+@each $name,$width in $breakpoints {
+   @if($width == 480px ){
+        .container-#{$name}{
+            width: 100%;
+        }
+   }
+   @else {
+        .container-#{$name}{
+            width: $width;
+        }
+   }
+}
