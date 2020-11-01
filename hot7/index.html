@@ -29,6 +29,8 @@
             padding-bottom: 20px;
             position: sticky;
             top: 0;
+            z-index: 9999;
+            box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.472);
         }
         nav li {
             list-style: none;
@@ -73,6 +75,10 @@
             /* top: -100px; */
             transform: translateY(-40%);
         }
+        #news {
+            padding-bottom: 100px;
+            background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+        }
         /* .news-item a{
             position: relative;
             display: block;
@@ -111,11 +117,12 @@
         #info {
             justify-content: center;
         }
-        #info .col-9 {
-            background-color: #ccc;
-        }
         .info-item {
             margin: 5px 0;
+        }
+        #info h2{
+            text-align: center;
+            margin-bottom: 50px;
         }
         .info-item i {
             display: inline-block;
@@ -164,7 +171,7 @@
         <div class="fixed-width row" id="info">
             <div class="col-9 row">
                 <div class="col-12">
-                    <h2>title</h2>
+                    <h2>資資源為快熱送</h2>
                 </div>
                 <div class="col-7 row">
                     <div class="col-4 info-item">
@@ -176,31 +183,37 @@
                        TEXT
                     </div>
                     <div class="col-4 info-item">
-                        <i class="fas fa-exclamation-circle fa-lg"></i>
+                        <i class="fab fa-earlybirds fa-lg"></i>
                        TEXT
                     </div>
                     <div class="col-4 info-item">
-                        <i class="fas fa-exclamation-circle fa-lg"></i>
+                        <i class="fas fa-hippo fa-lg"></i>
                        TEXT
                     </div>
                     <div class="col-4 info-item">
-                        <i class="fas fa-exclamation-circle fa-lg"></i>
+                        <i class="fab fa-studiovinari fa-lg"></i>
                        TEXT
                     </div>
                     <div class="col-4 info-item">
-                        <i class="fas fa-exclamation-circle fa-lg"></i>
+                        <i class="fab fa-sketch fa-lg"></i>
                        TEXT
                     </div>
                     <div class="col-4 info-item">
-                        <i class="fas fa-exclamation-circle fa-lg"></i>
+                        <i class="fab fa-safari fa-lg"></i>
                        TEXT
                     </div>
                     <div class="col-4 info-item">
-                        <i class="fas fa-exclamation-circle fa-lg"></i>
+                        <i class="fab fa-octopus-deploy fa-lg"></i>
                        TEXT
                     </div>
                 </div>
-                <div class="col-5"></div>
+                <div class="col-5">
+                    <h3><i class="far fa-clock"></i>營業時間</h3>
+                    <div>11：30 ~ 14：30 最後點餐時間14：00</div>
+                    <div>17：30 ~ 22：00 最後點餐時間21：00</div>
+                    <a href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
             </div>
         </div>
     </div>
