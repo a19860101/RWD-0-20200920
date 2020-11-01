@@ -1,3 +1,3 @@
 <?php
-    $t = glob('./');
+    $t = glob('/');
     var_dump($t);
