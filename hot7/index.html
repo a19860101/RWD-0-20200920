@@ -26,6 +26,8 @@
             background-color: #fa0;
             padding-top: 20px;
             padding-bottom: 20px;
+            position: sticky;
+            top: 0;
         }
         nav li {
             list-style: none;
@@ -52,6 +54,24 @@
             height: 100%;
             object-fit: cover;
         }
+        img {
+            width: 100%;
+            /* max-width: 100%; */
+        }
+        [class^="col"]{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        /* 
+            *= 包含
+            ^= 開頭
+            $= 結尾
+        */
+        #news .news-item {
+            /* position: relative; */
+            /* top: -100px; */
+            transform: translateY(-40%);
+        }
     </style>
 </head>
 <body>
@@ -74,5 +94,18 @@
     <header class="full-width">
         <img src="https://picsum.photos/id/23/1600/600" alt="">
     </header>
-</body>
+    <div id="news" class="full-width">
+        <div class="fixed-width row">
+            <div class="col-4 news-item">
+                <a href="#"><img src="https://picsum.photos/id/45/800/600" alt=""></a>
+            </div>
+            <div class="col-4 news-item">
+                <a href="#"><img src="https://picsum.photos/id/25/800/600" alt=""></a>
+            </div>
+            <div class="col-4 news-item">
+                <a href="#"><img src="https://picsum.photos/id/55/800/600" alt=""></a>
+            </div>
+        </div>
+    </div>
+</body> 
 </html>
