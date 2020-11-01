@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: serif;
+            font-family: "Roboto","Microsoft Jhenghei";
             box-sizing: border-box;
         }
         #logo {
@@ -17,10 +18,29 @@
             justify-content: center;
             align-items: flex-end;
             text-align: center;
-            height: 200px;
+            height: 160px;
+            padding-bottom: 30px;
             background-color: #aaa;
         }
-
+        nav {
+            background-color: #fa0;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        nav li {
+            list-style: none;
+        }
+        nav ul.row {
+            justify-content: center;
+            width: 100%;
+        }
+        nav a {
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -29,5 +49,16 @@
             <h1>LOGO</h1>
         </div>
     </div>
+    <nav class="full-width row">
+        <ul class="row">
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Menu</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
