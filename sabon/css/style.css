@@ -238,7 +238,7 @@ img {
   padding-right: 15px;
 }
 
-.no-padding {
+.no-padding > [class^="col"] {
   padding: 0;
 }
 
@@ -292,17 +292,17 @@ img {
   .ai-strech {
     align-items: strech;
   }
-  .ai-flex-start {
-    align-items: flex-start;
+  .t-left {
+    text-align: left;
   }
-  .ai-flex-end {
-    align-items: flex-end;
+  .t-center {
+    text-align: center;
   }
-  .ai-center {
-    align-items: center;
+  .t-right {
+    text-align: right;
   }
-  .ai-strech {
-    align-items: strech;
+  .t-justify {
+    text-align: justify;
   }
 }
 
@@ -356,17 +356,17 @@ img {
   .ai-sm-strech {
     align-items: strech;
   }
-  .ai-sm-flex-start {
-    align-items: flex-start;
+  .t-sm-left {
+    text-align: left;
   }
-  .ai-sm-flex-end {
-    align-items: flex-end;
+  .t-sm-center {
+    text-align: center;
   }
-  .ai-sm-center {
-    align-items: center;
+  .t-sm-right {
+    text-align: right;
   }
-  .ai-sm-strech {
-    align-items: strech;
+  .t-sm-justify {
+    text-align: justify;
   }
 }
 
@@ -420,17 +420,17 @@ img {
   .ai-md-strech {
     align-items: strech;
   }
-  .ai-md-flex-start {
-    align-items: flex-start;
+  .t-md-left {
+    text-align: left;
   }
-  .ai-md-flex-end {
-    align-items: flex-end;
+  .t-md-center {
+    text-align: center;
   }
-  .ai-md-center {
-    align-items: center;
+  .t-md-right {
+    text-align: right;
   }
-  .ai-md-strech {
-    align-items: strech;
+  .t-md-justify {
+    text-align: justify;
   }
 }
 
@@ -484,17 +484,17 @@ img {
   .ai-lg-strech {
     align-items: strech;
   }
-  .ai-lg-flex-start {
-    align-items: flex-start;
+  .t-lg-left {
+    text-align: left;
   }
-  .ai-lg-flex-end {
-    align-items: flex-end;
+  .t-lg-center {
+    text-align: center;
   }
-  .ai-lg-center {
-    align-items: center;
+  .t-lg-right {
+    text-align: right;
   }
-  .ai-lg-strech {
-    align-items: strech;
+  .t-lg-justify {
+    text-align: justify;
   }
 }
 
@@ -548,17 +548,17 @@ img {
   .ai-xl-strech {
     align-items: strech;
   }
-  .ai-xl-flex-start {
-    align-items: flex-start;
+  .t-xl-left {
+    text-align: left;
   }
-  .ai-xl-flex-end {
-    align-items: flex-end;
+  .t-xl-center {
+    text-align: center;
   }
-  .ai-xl-center {
-    align-items: center;
+  .t-xl-right {
+    text-align: right;
   }
-  .ai-xl-strech {
-    align-items: strech;
+  .t-xl-justify {
+    text-align: justify;
   }
 }
 
