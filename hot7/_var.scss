@@ -1,3 +1,13 @@
+$colors:(
+    red:#ff0055,
+    green:#00b460,
+    blue:#0084ff,
+    yellow:#ffff00,
+    orange:#ffbb00,
+    purple:#7b00ce,
+    dark:#222,
+    light:#e0e0e0
+);
 $breakpoints:(
     all:0,
     sm:480px,
@@ -6,3 +16,8 @@ $breakpoints:(
     xl:1200px
 );
 $grid:12;
+$spacing: 15px;
+$displays: inline block inline-block flex grid table table-cell;
+$justifyContent: flex-start flex-end center space-between space-around;
+$alignItems:flex-start flex-end center strech;
+$aligns:left center right justify;

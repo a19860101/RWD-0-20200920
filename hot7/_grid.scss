@@ -37,3 +37,10 @@
     }
     
 }
+[class^="col"]{
+    padding-left: $spacing;
+    padding-right: $spacing;
+}
+.no-padding {
+    padding: 0;
+}

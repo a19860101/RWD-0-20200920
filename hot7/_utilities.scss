@@ -1,0 +1,53 @@
+@each $name,$width in $breakpoints {
+    @media(min-width: $width){
+        @each $display in $displays {
+            @if($width == 0){
+                .d-#{$display}{
+                    display: $display;
+                }
+            }
+            @else{
+                .d-#{$name}-#{$display}{
+                    display: $display;
+                }
+            }
+        }
+        @each $jc in $justifyContent{
+            @if($width == 0){
+                .jc-#{$jc}{
+                    justify-content: $jc;
+                }
+            }
+            @else{
+                .jc-#{$name}-#{$jc}{
+                    justify-content: $jc;
+                }
+            }
+        }
+        @each $ai in $alignItems{
+            @if($width == 0){
+                .ai-#{$ai}{
+                    align-items: $ai;
+                }
+            }
+            @else{
+                .ai-#{$name}-#{$ai}{
+                    align-items: $ai;
+                }
+            }
+        }
+        @each $ai in $alignItems{
+            @if($width == 0){
+                .ai-#{$ai}{
+                    align-items: $ai;
+                }
+            }
+            @else{
+                .ai-#{$name}-#{$ai}{
+                    align-items: $ai;
+                }
+            }
+        }
+    }
+}
+// .d-sm-block
