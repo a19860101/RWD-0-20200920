@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            nav {
+                width: 100%;
+                height: 50px;
+                background-color: #fa0;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+                line-height: 50px;
+                padding: 0;
+                margin: 0;
+            }
+            nav a {
+                text-decoration: none;
+                margin: 0 10px;
+            }
+            .dropdown-menu {
+                display: none;
+            }
+            /* nav a:hover + .dropdown-menu {
+                display: flex;
+            } */
+            nav li:hover .dropdown-menu {
+                display: flex;
+            }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">MENU 1</a></li>
+            <li><a href="#">MENU 2</a></li>
+            
+            <li>
+                <a href="#">MENU 3</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">MENU 4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
