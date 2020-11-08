@@ -23,21 +23,44 @@
             }
             .dropdown-menu {
                 display: none;
+                background-color: #ff4911;
+
+                position: absolute;
+                /* width: 100%; */
+                width: 300px;
+                flex-direction: column;
+                left: 0;
             }
-            /* nav a:hover + .dropdown-menu {
+            nav a:hover + .dropdown-menu {
                 display: flex;
+            }
+            /* nav li:hover .dropdown-menu {
+                display: flex;
+
             } */
-            nav li:hover .dropdown-menu {
-                display: flex;
+            .menu {
+                /* position: relative; */
+            }
+            .menu > li{
+                position: relative;
             }
     </style>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#">MENU 1</a></li>
+        <ul class="menu">
+            <li><a href="#">MENU 1</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                    <li><a href="#">sub menu</a></li>
+                </ul>
+            </li>
             <li><a href="#">MENU 2</a></li>
-            
             <li>
                 <a href="#">MENU 3</a>
                 <ul class="dropdown-menu">
