@@ -18,8 +18,15 @@ $breakpoints:(
 $en:"Segoe UI";
 $tc: "Microsoft Jhenghei";
 $grid:12;
-$spacing: 15px;
+$spacing: 5px;
 $displays: inline block inline-block flex grid table table-cell;
 $justifyContent: flex-start flex-end center space-between space-around;
 $alignItems:flex-start flex-end center strech;
 $aligns:left center right justify;
+$directions: (
+    left: l,
+    right: r,
+    top: t,
+    bottom: b
+);
+$positions: static relative absolute fixed sticky;
