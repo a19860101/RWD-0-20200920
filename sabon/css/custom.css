@@ -41,8 +41,13 @@ nav a {
 }
 nav .row {
     width: 100%;
+    flex-direction: column;
 }
-
+@media(min-width:600px){
+    nav .row {
+        flex-direction: row;
+    }
+}
 header {
     height: 400px;
 }
