@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            name: 'John',
+            mail: 'asdf@gmail.com',
+            gender: 'female'
+        }
+        // console.log(obj.name);
+        // console.log(obj.mail);
+        // console.log(obj.gender);
+        // console.log(obj['name']);
+        // console.log(obj['mail']);
+        // console.log(obj['gender']);
+        const users = [
+            {
+                id:1,
+                name:'John',
+                mail: 'asdf@gmail.com'
+            },
+            {
+                id:2,
+                name: 'Mary',
+                mail:'qwerqwer@gmail.com'
+            },
+            {
+                id:3,
+                name: 'Jay',
+                mail:'qwe123123wer@gmail.com'
+            }
+        ];
+        console.log(users);
+        for(let user of users){
+            console.log(user.name);
+            console.log(user.mail)
+        }
+        console.log(users[1].mail)
+    </script>
+</body>
+</html>
