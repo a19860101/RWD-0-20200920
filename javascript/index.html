@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>hello world!!</h1>
+    <ul>
+        <li class="item">滷肉飯</li>
+        <li class="item">排骨飯</li>
+        <li class="item">羅波湯</li>
+        <li class="item">香草冰淇淋</li>
+    </ul>
+    <script>
+        let li = document.querySelectorAll('.item');
+        // console.log(li);
+        for(let item of li){
+            console.log(item);
+            item.style.color ='red';
+        }
+
+        let h1 = document.querySelectorAll('h1');
+        console.log(h1);
+        for(let item of h1){
+            console.log(item)
+        }
+    </script>
+</body>
+</html>
