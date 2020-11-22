@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //匿名函式
+        // function (){}
+        // function expression
+        function test(){
+            return 'Hello World';
+        }
+        function go(){
+            console.log(test());
+        }
+
+        go()
+
+        //具有提升性
+        // function declared
+        let qwerty = function(){
+            console.log('qwerty');
+        }
+        qwerty();
+
+    </script>    
+</body>
+</html>
