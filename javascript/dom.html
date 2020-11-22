@@ -10,7 +10,7 @@
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur earum iste, incidunt officiis dolor eius nihil beatae accusantium facilis illo modi voluptates numquam quia soluta facere, aperiam veritatis odio inventore.
     </p>
-    <ul id="menu">
+    <!-- test --><ul id="menu">
         <li class="item"><a href="#">link 1</a></li>
         <li class="item"><a href="#">link 2</a></li>
         <li class="item"><a href="#">link 3</a></li>
@@ -29,8 +29,16 @@
         // let title = document.getElementById('title');
         // console.log(title);
 
-        let h1 = document.getElementsByTagName('h1');
-        console.log(h1);
+        // let h1 = document.getElementsByTagName('h1');
+        // console.log(h1);
+
+        let menu = document.querySelector('#menu');
+        // console.log(menu.parentElement);//父元素
+        // console.log(menu.parentNode);//父節點
+        console.log(menu.nextElementSibling);
+        console.log(menu.previousElementSibling);
+        // console.log(menu.nextSibling);
+        // console.log(menu.previousSibling);
     </script>
 </body>
 </html>
