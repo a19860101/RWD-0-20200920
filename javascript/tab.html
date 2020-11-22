@@ -34,6 +34,11 @@
         }
         .tab-panel.active {
             display: block;
+            animation: fade-in .6s;
+        }
+        @keyframes fade-in {
+            from {opacity: 0;transform: translateY(10%);}
+            to {opacity: 1;transform: translateY(0);}
         }
     </style>
 </head>
@@ -92,9 +97,9 @@
                 for(let panel of panels){
                     // console.log(panel.id)
                     if(href === '#'+ panel.id){
-                       console.log('success');
+                        panel.classList.add('active');
                     }else{
-                        console.log('error');
+                        panel.classList.remove('active');
                     }
                 }
             }
