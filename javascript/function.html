@@ -10,22 +10,36 @@
         //匿名函式
         // function (){}
         // function expression
-        function test(){
-            return 'Hello World';
-        }
         function go(){
             console.log(test());
         }
+        function test(){
+            return 'Hello World';
+            // console.log('hello world');
 
-        go()
+        }
+       
+
+        // go();
 
         //具有提升性
         // function declared
         let qwerty = function(){
             console.log('qwerty');
         }
-        qwerty();
+        // qwerty();
 
+        // console.log(test());
+        let a = test();
+        console.log(a);
+
+
+        function square(x){
+            return x*x;
+        }
+
+        let ans = square(11);
+        console.log(ans);
     </script>    
 </body>
 </html>
