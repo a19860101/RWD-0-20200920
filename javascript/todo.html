@@ -9,19 +9,33 @@
             margin: 0;
             padding: 0;
         }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
         .todos li {
             display: flex;
             justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #5c7979;
+            background-color: #aee6e6;
+        }
+        .todos li.completed {
+            background-color: #ccc;
+            text-decoration: line-through;
         }
     </style>
 </head>
 <body>
-    <input type="text" id="input"><button onclick="add()">新增事項</button>
-    <ul class="todos">
-        <li>吃飯<span class="del">刪除</span></li>
-        <li>睡覺<span class="del">刪除</span></li>
-        <li>打東東<span class="del">刪除</span></li>
-    </ul>
+    <div class="container">
+
+        <input type="text" id="input"><button onclick="add()">新增事項</button>
+        <ul class="todos">
+            <li class="todo-item">吃飯<span class="del active">刪除</span></li>
+            <li class="todo-item">睡覺<span class="del">刪除</span></li>
+            <li class="todo-item completed">打東東<span class="del">刪除</span></li>
+        </ul>
+    </div>
     <script>
         function add(){
             let input = document.querySelector('#input').value;
@@ -33,15 +47,26 @@
             li.append(span);
             span.classList.add('del');
             let ul = document.querySelector('ul');
+            li.classList.add('todo-item');
             ul.append(li);
             document.querySelector('#input').value = '';
         }
 
         document.onclick = function(e){
             // console.log(e);
-            if(e.target.className === 'del'){
+            // if(e.target.className === 'del'){
+            //     e.target.parentElement.remove();
+            // }
+            if(e.target.className.indexOf('del') > -1){
                 e.target.parentElement.remove();
             }
+            if(e.target.className.indexOf('todo-item') > -1){
+                console.log('completed');
+                e.target.classList.toggle('completed');
+            }
+            // if(e.target.nodeName === "LI"){
+            //     console.log('completed')
+            // }
         }
 
 
