@@ -37,11 +37,10 @@
             document.querySelector('#input').value = '';
         }
 
-        let dels = document.querySelectorAll('.del');
-        for(let del of dels){
-            del.onclick = function(){
-                console.log(this);
-                this.parentElement.remove();
+        document.onclick = function(e){
+            // console.log(e);
+            if(e.target.className === 'del'){
+                e.target.parentElement.remove();
             }
         }
 
