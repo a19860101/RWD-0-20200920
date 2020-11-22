@@ -40,10 +40,10 @@
 <body>
     <div class="tabs">
         <nav class="tab-nav">
-            <a href="#" class="tab-link active">tab 1</a>
-            <a href="#" class="tab-link">tab 2</a>
-            <a href="#" class="tab-link">tab 3</a>
-            <a href="#" class="tab-link">tab 4</a>
+            <a href="#tab-1" class="tab-link active">tab 1</a>
+            <a href="#tab-2" class="tab-link">tab 2</a>
+            <a href="#tab-3" class="tab-link">tab 3</a>
+            <a href="#tab-4" class="tab-link">tab 4</a>
         </nav>
         <div id="tab-1" class="tab-panel active">
             <h2>Title 1</h2>
@@ -81,6 +81,22 @@
                 }
                 console.log(this);
                 this.classList.add('active');
+
+                //panel
+                let panels = document.querySelectorAll('.tab-panel');
+                // console.log(panels);
+
+                let href = this.getAttribute('href');
+                // console.log(href);
+
+                for(let panel of panels){
+                    // console.log(panel.id)
+                    if(href === '#'+ panel.id){
+                       console.log('success');
+                    }else{
+                        console.log('error');
+                    }
+                }
             }
         }
     </script>
