@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:"Segoe UI";
+        }
+        .tabs {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            display: flex;
+        }
+        .tab-link {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #ccc;
+            color: #222;
+        }
+        .tab-link.active {
+            background-color: #ffc85c;
+        }
+        .tab-panel {
+            padding: 10px;
+            background-color: #ffc85c;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+            animation: fade-in .6s;
+        }
+        @keyframes fade-in {
+            from {opacity: 0;transform: translateY(10%);}
+            to {opacity: 1;transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <nav class="tab-nav">
+            <a href="#tab-1" data-target="tab-1" class="tab-link active">tab 1</a>
+            <a href="#tab-2" data-target="tab-2" class="tab-link">tab 2</a>
+            <a href="#tab-3" data-target="tab-3" class="tab-link">tab 3</a>
+            <a href="#tab-4" data-target="tab-4" class="tab-link">tab 4</a>
+        </nav>
+        <div id="tab-1" class="tab-panel active">
+            <h2>Title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem deleniti pariatur debitis quaerat voluptas accusantium sapiente architecto, modi consequatur delectus facilis eum. Harum aspernatur modi ex aut ad eius!
+            </p>
+        </div>
+        <div id="tab-2" class="tab-panel">
+            <h2>Title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, amet reiciendis aliquam nam quia tenetur optio quos error nulla illum velit ipsam. Aperiam ut culpa cum maiores cumque perferendis hic id? Autem sed aliquam incidunt delectus eos dolor mollitia perspiciatis, quod nostrum fugiat, modi suscipit consequuntur laborum. Laboriosam, pariatur doloribus.
+            </p>
+        </div>
+        <div id="tab-3" class="tab-panel">
+            <h2>Title 3</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, laudantium! Perspiciatis dolorum omnis numquam ipsam quaerat pariatur magni mollitia optio.
+            </p>
+        </div>
+        <div id="tab-4" class="tab-panel">
+            <h2>Title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem deleniti pariatur debitis quaerat voluptas accusantium sapiente architecto, modi consequatur delectus facilis eum. Harum aspernatur modi ex aut ad eius!
+            </p>
+        </div>
+    </div>
+    <script>
+        // let tabLinks = document.getElementsByClassName('tab-link');
+        let tabLinks = document.querySelectorAll('.tab-link');
+        console.log(tabLinks);
+        for(let tabLink of tabLinks){
+            tabLink.onclick = function(){
+                for(let tabLink of tabLinks){
+                    tabLink.classList.remove('active');
+                }
+                console.log(this);
+                this.classList.add('active');
+
+                //panel
+                let panels = document.querySelectorAll('.tab-panel');
+                // console.log(panels);
+
+                // let href = this.getAttribute('href');
+                let target = this.dataset.target;
+                console.log(target);
+
+                for(let panel of panels){
+                    // console.log(panel.id)
+                    if(target === panel.id){
+                        panel.classList.add('active');
+                    }else{
+                        panel.classList.remove('active');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
