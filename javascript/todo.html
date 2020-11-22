@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input"><button onclick="add()">新增事項</button>
+    <input type="text" id="input"><button onclick="add2()">新增事項</button>
     <ul>
         <li>吃飯</li>
         <li>睡覺</li>
@@ -20,6 +20,18 @@
             li.append(input);
             let ul = document.querySelector('ul');
             ul.append(li);
+            document.querySelector('#input').value = '';
+        }
+        function add2(){
+            let input = document.querySelector('#input').value;
+            let li = document.createElement('li');
+            let textNode = document.createTextNode(input);
+            li.appendChild(textNode);
+            let ul = document.querySelector('ul');
+            ul.appendChild(li);
+
+
+            document.querySelector('#input').value = '';
         }
     </script>
 </body>
