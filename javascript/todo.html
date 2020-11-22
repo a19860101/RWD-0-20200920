@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .todos li {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="input"><button onclick="add2()">新增事項</button>
-    <ul>
-        <li>吃飯</li>
-        <li>睡覺</li>
-        <li>打東東</li>
+    <input type="text" id="input"><button onclick="add()">新增事項</button>
+    <ul class="todos">
+        <li>吃飯<span class="del">刪除</span></li>
+        <li>睡覺<span class="del">刪除</span></li>
+        <li>打東東<span class="del">刪除</span></li>
     </ul>
     <script>
         function add(){
@@ -18,10 +28,40 @@
             let li = document.createElement('li');
             console.log(input);
             li.append(input);
+            let span = document.createElement('span');
+            span.append('刪除');
+            li.append(span);
+            span.classList.add('del');
             let ul = document.querySelector('ul');
             ul.append(li);
             document.querySelector('#input').value = '';
         }
+
+        let dels = document.querySelectorAll('.del');
+        for(let del of dels){
+            del.onclick = function(){
+                console.log(this);
+                this.parentElement.remove();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         function add2(){
             let input = document.querySelector('#input').value;
             let li = document.createElement('li');
