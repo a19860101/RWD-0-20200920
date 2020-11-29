@@ -30,11 +30,10 @@
 </head>
 <body>
     <div class="container" id="app">
-
         <input type="text" id="input" v-model="input"><button v-on:click="add()">新增事項</button>
-        <div>{{test}}</div>
         <ul class="todos">
-            <li class="todo-item" v-for="todo of todos">{{todo.name}}<span class="del">刪除</span></li>
+            <li class="todo-item" v-for="(todo,idx) of todos">{{todo.name}}
+                <span class="del" @click="del(idx)">刪除</span></li>
         </ul>
     </div>
     <script>
@@ -65,6 +64,10 @@
                         completed: false
                     })
                     this.input = '';
+                },
+                del(idx){
+                    this.todos.splice(idx,1);
+                    // console.log(idx)
                 }
             }
         });
