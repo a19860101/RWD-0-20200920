@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        .todos li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #5c7979;
+            background-color: #aee6e6;
+        }
+        .todos li.completed {
+            background-color: #ccc;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="app">
+
+        <input type="text" id="input" v-model="test"><button onclick="add()">新增事項</button>
+        <div>{{test}}</div>
+        <ul class="todos">
+            <li class="todo-item">吃飯<span class="del active">刪除</span></li>
+            <li class="todo-item">睡覺<span class="del">刪除</span></li>
+            <li class="todo-item completed">打東東<span class="del">刪除</span></li>
+        </ul>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    input: ''
+                }
+            }
+        });
+        app.mount('#app')
+    </script>
+</body>
+</html>
