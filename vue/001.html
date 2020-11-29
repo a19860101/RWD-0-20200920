@@ -13,6 +13,10 @@
         <p>
             {{number}}
         </p>
+        <ul>
+            <li v-for="drink in drinks">{{drink}}</li>
+        </ul>
+        <div v-for="drink of drinks">{{drink}}</div>
         <img v-bind:src="image" alt="title" :title="text">
     </div>
     <script>
@@ -22,7 +26,8 @@
                     title: 'HEllo Vue!!!!',
                     number: 12345,
                     image:'https://picsum.photos/id/45/300',
-                    text: 'Picsum Photos'
+                    text: 'Picsum Photos',
+                    drinks: ['紅茶','旅茶','拿鐵','冰淇淋紅茶','百香雙響砲']
                 }
             }
         });
