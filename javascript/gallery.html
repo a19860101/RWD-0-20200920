@@ -7,6 +7,13 @@
     <style>
         .thumb {
             width: 100px;
+            border: 5px solid #000;
+            transition: .6s;
+
+        }
+        .thumb.active {
+            border: 5px solid #f52323;
+            transition: .6s;
         }
     </style>
 </head>
@@ -14,7 +21,7 @@
     <div class="gallery">
         <img src="images/iphone-12-black-select-2020.png" class="picture">
         <div class="thumbs">
-            <img src="images/iphone-12-black-select-2020.png" class="thumb">
+            <img src="images/iphone-12-black-select-2020.png" class="thumb active">
             <img src="images/iphone-12-blue-select-2020.png" class="thumb">
             <img src="images/iphone-12-green-select-2020.png" class="thumb">
             <img src="images/iphone-12-red-select-2020.png" class="thumb">
@@ -30,6 +37,10 @@
                 // let newImg = e.target.src;
                 let newImg = e.target.getAttribute('src');
                 document.querySelector('.picture').setAttribute('src',newImg);
+                for(let th of thumb){
+                    th.classList.remove('active');
+                }
+                e.target.classList.add('active');
             }
         }
     </script>
