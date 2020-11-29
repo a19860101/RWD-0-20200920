@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" onkeyup="search()">
+    <ul class="items">
+        <li>iPhone 12</li>
+        <li>iPhone 12 Mini</li>
+        <li>iPhone 12 Pro</li>
+        <li>iPhone 12 Pro Max</li>
+        <li>iPad 2019</li>
+        <li>iPad Air</li>
+        <li>iPad Pro</li>
+        <li>iMac</li>
+        <li>Mac Book Air</li>
+        <li>Mac Book Pro</li>
+        <li>Mac Book Pro</li>
+        <li>Mac Pro</li>
+    </ul>
+    <script>
+        function search(){
+            let search = document.querySelector('#search').value;
+            let li = document.querySelectorAll('li');
+            for(let data of li){
+                if(data.textContent.indexOf(search) > -1){
+                    console.log('success');
+                    data.style.display = '';
+                }else{
+                    console.log('error');
+                    data.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
