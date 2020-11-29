@@ -29,12 +29,36 @@
         </div>
     </div>
     <script>
+        // let thumb = document.querySelectorAll('.thumb');
+        // for(let th of thumb){
+        //     th.onclick = function(e){
+        //         // console.log(e.target.src);
+        //         // console.log(e.target.getAttribute('src'));
+        //         // let newImg = e.target.src;
+        //         let newImg = e.target.getAttribute('src');
+        //         document.querySelector('.picture').setAttribute('src',newImg);
+        //         for(let th of thumb){
+        //             th.classList.remove('active');
+        //         }
+        //         e.target.classList.add('active');
+        //     }
+        // }
+
+        // let thumb = document.querySelectorAll('.thumb');
+        // for(let th of thumb){
+        //     th.onclick = function(e){
+        //         console.log(this);
+        //         let newImg =this.getAttribute('src');
+        //         document.querySelector('.picture').setAttribute('src',newImg);
+        //         for(let th of thumb){
+        //             th.classList.remove('active');
+        //         }
+        //         this.classList.add('active');
+        //     }
+        // }
         let thumb = document.querySelectorAll('.thumb');
         for(let th of thumb){
-            th.onclick = function(e){
-                // console.log(e.target.src);
-                // console.log(e.target.getAttribute('src'));
-                // let newImg = e.target.src;
+            th.onclick = e => {
                 let newImg = e.target.getAttribute('src');
                 document.querySelector('.picture').setAttribute('src',newImg);
                 for(let th of thumb){
