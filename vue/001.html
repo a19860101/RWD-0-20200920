@@ -13,16 +13,21 @@
         <p>
             {{number}}
         </p>
+        <img v-bind:src="image" alt="title" :title="text">
     </div>
     <script>
-        Vue.createApp({
+        const app = Vue.createApp({
             data(){
                 return {
                     title: 'HEllo Vue!!!!',
-                    number: 12345
+                    number: 12345,
+                    image:'https://picsum.photos/id/45/300',
+                    text: 'Picsum Photos'
                 }
             }
-        }).mount('#app');
+        });
+        app.mount('#app');
+
     </script>
 </body>
 </html>
