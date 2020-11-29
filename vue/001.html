@@ -14,7 +14,7 @@
             {{number}}
         </p>
         <ul>
-            <li v-for="drink in drinks">{{drink}}</li>
+            <li v-for="(drink,idx) in drinks">{{drink}} -- {{idx}}</li>
         </ul>
         <div v-for="drink of drinks">{{drink}}</div>
         <img v-bind:src="image" alt="title" :title="text">

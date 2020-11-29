@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div v-for="(drink,idx) of drinks">
+            <h2>{{idx}} {{drink.name}} </h2>
+            <p>{{drink.price}}</p>
+        </div>
+    </div>    
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    drinks:[
+                        {
+                            id:1,
+                            name: '紅茶',
+                            price: 20
+                        },
+                        {
+                            id:1,
+                            name: '綠茶',
+                            price: 20
+                        },
+                        {
+                            id:1,
+                            name: '奶茶',
+                            price: 25
+                        },
+                        {
+                            id:1,
+                            name: '珍珠奶茶',
+                            price: 35
+                        },
+                        {
+                            id:1,
+                            name: '冰淇淋紅茶',
+                            price: 45
+                        },
+                    ]
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
