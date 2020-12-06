@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div v-for="photo of photos">
+            <h2>{{photo.author}}</h2>
+            <img :src="photo.download_url" width="200">
+        </div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    photos:[]
+                }
+            },
+            created(){
+                let url = 'https://picsum.photos/v2/list';
+                fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    this.photos = data;
+                })
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
