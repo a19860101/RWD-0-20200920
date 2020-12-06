@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -23,10 +23,9 @@
             },
             created(){
                 let url = 'https://picsum.photos/v2/list';
-                fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    this.photos = data;
+                axios.get(url)
+                .then(datas => {
+                    this.photos = datas.data;
                 })
             }
         });
