@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #0af;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <app-title></app-title>
+    </div>
+    <template id="box">
+        <div class="box">asdfasdf</div>
+    </template>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return{}
+            },
+        });
+        app.component('app-title',{
+            template:`
+            <div>
+                <h1 @click="test()">{{title}}</h1>
+            </div>
+            `,
+            data(){
+                return {
+                    title:'Hello Vue!!!!'
+                }
+            },
+            methods:{
+                test(){
+                    alert('Hello!!!');
+                }
+            }
+        });
+        app.component('app-container',{
+            template:`
+                <div class="container">
+                    <app-title></app-title>
+                </div>
+            `
+        })
+        app.mount('#app');
+    </script>
+</body>
+</html>
