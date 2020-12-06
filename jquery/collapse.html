@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI";
+        }
+            .container {
+                width: 600px;
+                margin: auto;
+            }
+            h2 {
+                background-color: #ffc72e;
+                padding: 10px;
+                border-bottom: 1px solid #000;
+            }
+            p {
+                background-color: #e6ff56;
+                padding: 10px;
+                display: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam, vitae voluptatem dignissimos ducimus nostrum doloribus veritatis cumque laborum reprehenderit similique eaque hic blanditiis laboriosam magni iste nemo rerum deserunt.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam, vitae voluptatem dignissimos ducimus nostrum doloribus veritatis cumque laborum reprehenderit similique eaque hic blanditiis laboriosam magni iste nemo rerum deserunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam, vitae voluptatem dignissimos ducimus nostrum doloribus veritatis cumque laborum reprehenderit similique eaque hic blanditiis laboriosam magni iste nemo rerum deserunt.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam, vitae voluptatem dignissimos ducimus nostrum doloribus veritatis cumque laborum reprehenderit similique eaque hic blanditiis laboriosam magni iste nemo rerum deserunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam, vitae voluptatem dignissimos ducimus nostrum doloribus veritatis cumque laborum reprehenderit similique eaque hic blanditiis laboriosam magni iste nemo rerum deserunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam, vitae voluptatem dignissimos ducimus nostrum doloribus veritatis cumque laborum reprehenderit similique eaque hic blanditiis laboriosam magni iste nemo rerum deserunt.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam, vitae voluptatem dignissimos ducimus nostrum doloribus veritatis cumque laborum reprehenderit similique eaque hic blanditiis laboriosam magni iste nemo rerum deserunt.
+        </p>
+    </div>
+    <script>
+        $('h2').hover(function(){
+            // $(this).next().toggle(600);
+            // $(this).next().fadeToggle(600);
+            $(this).next().stop().slideToggle();
+        });
+    </script>
+</body>
+</html>
