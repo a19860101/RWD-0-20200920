@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI";
+        }
+        nav {
+            position: fixed;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            height: 50px;
+            background-color: #222;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #about,#service,#contact,#product {
+            width: 100%;
+            height: 100vh;
+        }
+        #about {
+            background-color: #9ad3bc;
+        }
+        #service {
+            background-color: #ec524b;
+        }
+        #contact {
+            background-color: #f5b461;
+        }
+        #product {
+            background-color: #f3eac2;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">about</a>
+        <a href="#">service</a>
+        <a href="#">product</a>
+        <a href="#">contact</a>
+    </nav>
+    <div id="about"></div>
+    <div id="service"></div>
+    <div id="product"></div>
+    <div id="contact"></div>
+</body>
+</html>
