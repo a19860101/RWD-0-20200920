@@ -16,19 +16,25 @@
 <body>
     <div id="app">
         <app-title></app-title>
+        <app-desc></app-desc>
         <app-box></app-box>
-        <app-box></app-box>
-        <app-box></app-box>
-        <app-box></app-box>
-        <app-box></app-box>
+        <app-test></app-test>
     </div>
     <template id="box">
-        <div class="box"></div>
+        <div class="box">asdfasdf</div>
     </template>
     <script>
         const app = Vue.createApp({
             data(){
                 return{}
+            },
+            components:{
+                'app-desc':{
+                    template:`<p>my description</p>`
+                },
+                'app-test':{
+                    template:`test`
+                }
             }
         });
         app.component('app-title',{
