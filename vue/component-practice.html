@@ -5,16 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        li {
+            list-style: none;
+        }
+        .colorBox {
+            width: 50px;
+            height: 50px;
+        }
+        .prods {
+            display: flex;
+        }
+        .prods li {
+            border: 1px solid #242424;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <h2></h2>
-        <img src="" alt="">
-        <ul>
-            <li></li>
+        <h2>{{title}}</h2>
+        <img :src="image" alt="">
+        <ul class="inbox">
+            <li v-for="inbox of inBoxes">{{inbox}}</li>
         </ul>
-        <ul>
-            <li></li>
+        <ul class="prods">
+            <li v-for="prod of products" class="colorBox" :style="{backgroundColor:prod.color}">
+            </li>
+        </ul>
+        <ul class="prods">
+            <li v-for="prod of products">
+                <img :src="prod.image" width="100">
+            </li>
         </ul>
     </div>
     <script>
@@ -41,7 +63,7 @@
                             id:3,
                             image:'images/iphone-12-green-select-2020.png',
                             colorName:'綠色',
-                            color:'#5a0'
+                            color:'#0a8'
                         },
                         {
                             id:4,
