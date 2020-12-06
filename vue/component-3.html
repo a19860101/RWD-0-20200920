@@ -15,24 +15,25 @@
 </head>
 <body>
     <div id="app">
-        <app-title :test="title" :user="admin"></app-title>
+        <app-title></app-title>
     </div>
     <script>
         const app = Vue.createApp({
             data(){
-                return{
-                    title: 'Hello Vue!!',
-                    admin: 'John'
-                }
+                return{}
             },
         });
         app.component('app-title',{
-            props:['test','user'],
             template:`
             <div>
-                <h1>{{test}} {{user}}</h1>
+                <h1 @click="test()">{{title}}</h1>
             </div>
             `,
+            data(){
+                return {
+                    title:'Hello Vue!!!!'
+                }
+            },
         });
         
         app.mount('#app');
