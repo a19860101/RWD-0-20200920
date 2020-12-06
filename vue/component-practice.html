@@ -30,14 +30,15 @@
             <li v-for="inbox of inBoxes">{{inbox}}</li>
         </ul>
         <ul class="prods">
-            <li v-for="prod of products" class="colorBox" :style="{backgroundColor:prod.color}">
+            <li @click="changeIndex(idx)" v-for="(prod,idx) of products" class="colorBox" :style="{backgroundColor:prod.color}">
             </li>
         </ul>
         <ul class="prods">
-            <li v-for="prod of products">
+            <li @click="changeIndex(idx)" v-for="(prod,idx) of products">
                 <img :src="prod.image" width="100">
             </li>
         </ul>
+        <h1>{{currentIndex}}</h1>
     </div>
     <script>
          const app = Vue.createApp({
@@ -46,6 +47,7 @@
                     title: 'iPhone 12',
                     image: 'images/iphone-12-black-select-2020.png',
                     inBoxes:['iPhone','USB-C 對 Lightning 連接線'],
+                    currentIndex:0,
                     products:[
                         {
                             id:1,
@@ -80,6 +82,11 @@
                     ]
                 }
             },
+            methods:{
+                changeIndex(idx){
+                    this.currentIndex = idx;
+                }
+            }
         });
         app.mount('#app');
     </script>
