@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h2></h2>
+        <img src="" alt="">
+        <ul>
+            <li></li>
+        </ul>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+         const app = Vue.createApp({
+            data(){
+                return {
+                    title: 'iPhone 12',
+                    image: 'images/iphone-12-black-select-2020.png',
+                    inBoxes:['iPhone','USB-C 對 Lightning 連接線'],
+                    products:[
+                        {
+                            id:1,
+                            image:'images/iphone-12-black-select-2020.png',
+                            colorName:'黑色',
+                            color:'#000'
+                        },
+                        {
+                            id:2,
+                            image: 'images/iphone-12-red-select-2020.png',
+                            colorName:'紅色',
+                            color:'#fa0'
+                        },
+                        {
+                            id:3,
+                            image:'images/iphone-12-green-select-2020.png',
+                            colorName:'綠色',
+                            color:'#5a0'
+                        },
+                        {
+                            id:4,
+                            image:'images/iphone-12-blue-select-2020.png',
+                            colorName:'藍色',
+                            color:'#00f'
+                        },
+                        {
+                            id:5,
+                            image:'images/iphone-12-white-select-2020.png',
+                            colorName:'白色',
+                            color:'#eee'
+                        },
+                    ]
+                }
+            },
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>
