@@ -26,6 +26,24 @@
                 display: none;
             }
     </style>
+    <script>
+        // $(document).ready(function(){
+        //     $('h2').click(function(){
+        //         $(this).next().stop().slideToggle();
+        //     });
+        // });
+
+        $(function(){
+            $('h2').click(function(){
+                $(this).next().stop().slideToggle();
+            });
+        })
+
+        $(function(){
+            
+        })
+
+    </script>
 </head>
 <body>
     <div class="container">
@@ -50,11 +68,12 @@
         </p>
     </div>
     <script>
-        $('h2').hover(function(){
-            // $(this).next().toggle(600);
-            // $(this).next().fadeToggle(600);
-            $(this).next().stop().slideToggle();
-        });
+        // $('h2').hover(function(){
+        // $('h2').click(function(){
+        //     // $(this).next().toggle(600);
+        //     // $(this).next().fadeToggle(600);
+        //     $(this).next().stop().slideToggle();
+        // });
     </script>
 </body>
 </html>
