@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="app">
-        <h2>{{title}}</h2>
+        <h2>{{title}} {{color}}</h2>
         <img :src="image" alt="">
         <ul class="inbox">
             <li v-for="inbox of inBoxes">{{inbox}}</li>
@@ -45,7 +45,7 @@
             data(){
                 return {
                     title: 'iPhone 12',
-                    image: 'images/iphone-12-black-select-2020.png',
+                    // image: 'images/iphone-12-black-select-2020.png',
                     inBoxes:['iPhone','USB-C 對 Lightning 連接線'],
                     currentIndex:0,
                     products:[
@@ -85,6 +85,17 @@
             methods:{
                 changeIndex(idx){
                     this.currentIndex = idx;
+                }
+            },
+            computed:{
+                productIndex(){
+                    return this.products[this.currentIndex];
+                },
+                color(){
+                    return this.productIndex.colorName;
+                },
+                image(){
+                    return this.productIndex.image;
                 }
             }
         });
