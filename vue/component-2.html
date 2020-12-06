@@ -16,15 +16,23 @@
 <body>
     <div id="app">
         <app-title :test="title" :user="admin"></app-title>
+        <app-btn @add-number="addNumber"></app-btn>
+        <h1>{{number}}</h1>
     </div>
     <script>
         const app = Vue.createApp({
             data(){
                 return{
                     title: 'Hello Vue!!',
-                    admin: 'John'
+                    admin: 'John',
+                    number: 0
                 }
             },
+            methods:{
+                addNumber(v){
+                   this.number += v
+                }
+            }
         });
         app.component('app-title',{
             props:['test','user'],
@@ -34,6 +42,15 @@
             </div>
             `,
         });
+        app.component('app-btn',{
+            template:`<button @click="add()">Click</button>`,
+            methods:{
+                add(){
+                    this.$emit('add-number',10);
+                }
+            }
+
+        })
         
         app.mount('#app');
     </script>
