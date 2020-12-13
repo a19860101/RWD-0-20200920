@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
@@ -62,10 +64,10 @@
 </head>
 <body>
     <nav>
-        <a href="#" data-target="#about" class="active">about</a>
-        <a href="#" data-target="#service">service</a>
-        <a href="#" data-target="#product">product</a>
-        <a href="#" data-target="#contact">contact</a>
+        <a href="#" data-target="#about" class="animated swing">about</a>
+        <a href="#" data-target="#service" class="animated swing">service</a>
+        <a href="#" data-target="#product" class="animated swing">product</a>
+        <a href="#" data-target="#contact" class="animated swing">contact</a>
     </nav>
     <div id="about"></div>
     <div id="service"></div>
@@ -74,7 +76,8 @@
     <a href="#" id="gotop">TOP</a>
     <script>
         $(function(){
-            $('nav').find('a').click(function(){
+            $('nav').find('a').click(function(e){
+                e.preventDefault();
                 let target = $(this).data('target');
                 // console.log(target);
                 let offset = $(target).offset().top;
@@ -83,18 +86,26 @@
                     scrollTop: offset
                 });
             });
-            $('#gotop').click(function(){
+            $('#gotop').click(function(e){
+                e.preventDefault();
                 $('html,body').animate({
                     scrollTop: 0
                 })
+                // return false;
             })
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 console.log(h);
+                let _in = 'animated rollIn';
+                let _out = 'animated hinge';
                 if(h > 600){
-                    $('#gotop').show();
+                    // $('#gotop').show();
+                    // $('#gotop').fadeIn();
+                    $('#gotop').show().removeClass(_out).addClass(_in);
                 }else{
-                    $('#gotop').hide();
+                    // $('#gotop').hide();
+                    // $('#gotop').fadeOut();
+                    $('#gotop').removeClass(_in).addClass(_out);
                 }
             });
         })
