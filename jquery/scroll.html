@@ -56,12 +56,13 @@
              bottom: 15px;
              text-align: center;
              line-height: 50px;
+             display: none;
          }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#" data-target="#about">about</a>
+        <a href="#" data-target="#about" class="active">about</a>
         <a href="#" data-target="#service">service</a>
         <a href="#" data-target="#product">product</a>
         <a href="#" data-target="#contact">contact</a>
@@ -87,6 +88,15 @@
                     scrollTop: 0
                 })
             })
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                console.log(h);
+                if(h > 600){
+                    $('#gotop').show();
+                }else{
+                    $('#gotop').hide();
+                }
+            });
         })
     </script>
 </body>
