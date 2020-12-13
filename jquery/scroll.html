@@ -30,6 +30,9 @@
             margin-right: 10px;
             text-transform: uppercase;
         }
+        nav a.active {
+            color: #f00;
+        }
         #about,#service,#contact,#product {
             width: 100%;
             height: 100vh;
@@ -64,10 +67,10 @@
 </head>
 <body>
     <nav>
-        <a href="#" data-target="#about" class="animated swing">about</a>
-        <a href="#" data-target="#service" class="animated swing">service</a>
-        <a href="#" data-target="#product" class="animated swing">product</a>
-        <a href="#" data-target="#contact" class="animated swing">contact</a>
+        <a href="#" data-target="#about" class="active">about</a>
+        <a href="#" data-target="#service" >service</a>
+        <a href="#" data-target="#product" >product</a>
+        <a href="#" data-target="#contact" >contact</a>
     </nav>
     <div id="about"></div>
     <div id="service"></div>
@@ -85,6 +88,8 @@
                 $('html,body').animate({
                     scrollTop: offset
                 });
+                // $('nav').find('a').removeClass('active');
+                // $(this).addClass('active')
             });
             $('#gotop').click(function(e){
                 e.preventDefault();
@@ -107,6 +112,15 @@
                     // $('#gotop').fadeOut();
                     $('#gotop').removeClass(_in).addClass(_out);
                 }
+                $('nav').find('a').each(function(){
+                    let target = $(this).data('target');
+                    let offset = $(target).offset().top;
+                    if(h >= offset - 200){
+                        $('nav').find('a').removeClass('active');
+                        $(this).addClass('active')
+                    }
+                })
+
             });
         })
     </script>
