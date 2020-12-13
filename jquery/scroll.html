@@ -19,13 +19,21 @@
             display: flex;
             width: 100%;
             justify-content: center;
-            height: 50px;
+            align-items: center;
+            height: 70px;
             background-color: #222;
+            transition: .5s;
+        }
+        nav.active {
+            background-color: #ff7c99;
+            height: 50px;
+        }
+        nav.active a {
+            color: #000;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            line-height: 50px;
             margin-left: 10px;
             margin-right: 10px;
             text-transform: uppercase;
@@ -107,10 +115,12 @@
                     // $('#gotop').show();
                     // $('#gotop').fadeIn();
                     $('#gotop').show().removeClass(_out).addClass(_in);
+                    $('nav').addClass('active');
                 }else{
                     // $('#gotop').hide();
                     // $('#gotop').fadeOut();
                     $('#gotop').removeClass(_in).addClass(_out);
+                    $('nav').removeClass('active');
                 }
                 $('nav').find('a').each(function(){
                     let target = $(this).data('target');
