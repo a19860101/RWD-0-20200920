@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat ab at animi minus totam illo doloribus reiciendis facere nihil quo nemo aperiam necessitatibus excepturi, veritatis unde eligendi aliquid laudantium!
+        </p>
+        <ul class="items">
+            <li class="item"><a href="#">list 1</a></li>
+            <li class="item"><a href="#">list 2</a></li>
+            <li class="item"><a href="#">list 3</a></li>
+            <li class="item"><a href="#">list 4</a></li>
+            <li class="item"><a href="#">list 5</a></li>
+        </ul>
+
+    </div>
+    <script>
+        $(function(){
+            // let e = $('.items').parent();
+            // let e = $('.items').parents();
+            // let e = $('.items').parents('body');
+            
+            // let e = $('.items').next();
+            // let e = $('.items').prev();
+            // let e = $('.items').siblings();
+            let e = $('.items').siblings('p');
+            // let e = $('.item').eq(4).text();
+            
+            // let e = $('.items').find('a');
+            // let e = $('.container').children();
+            // let e = $('.container').children('h1');
+
+
+            console.log(e);
+        })
+    </script>
+</body>
+</html>
